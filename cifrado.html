@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="imagenes/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <picture>
+          <img src="imagenes/profile.jpg" alt="Foto hoja de vida" />
+        </picture>
+        <div id="cabecero">
+          <h1>Hoja de Vida</h1>
+          <p>Juan Pablo Morales Torres</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a target="_blank" href="pagina2/glosario.html">Glosario</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="cifrado.html">Cifrado Cesar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <h1>Cifrado del CESAR con clave</h1>
+
+        <h2>Parámetros de Encripción</h2>
+        <form name="FormularioCiframiento">
+            <label for="Rotacion">Rotación alfabeto:</label>
+            <input type="text" name="Rotacion" id="Rotacion">
+            <br><br>
+            <input type="checkbox" name="Usar_Clave" id="Usar_Clave">
+            <label for="Usar_Clave">Activar uso de clave</label>
+            <br>
+            <label for="Clave">Clave: </label>
+            <input type="text" name="Clave" id="Clave">
+            <label for="Desplazamiento_Clave">Desplazamiento_Clave: </label>
+            <input type="text" name="Desplazamiento_Clave" id="Desplazamiento_Clave">     
+    
+            <h2>Texto a Procesar:</h2>
+            <label style='display: inline;'>Ingrese mensaje original</label>
+            <textarea rows='4' cols='70' id="Texto_Origen" name="Texto_Origen" placeholder="copie aqu� el texto de su mensaje (m�ximo 1000 caracteres)" ></textarea>
+            <button type="button" onclick='Cifrado()' >Cifrar</button>&nbsp; &nbsp; &nbsp; 
+            <button type="button" onclick='Descifrado()' >Descifrar</button>
+            <hr>
+            <div class="alfabeto">
+                <p id="Alfabeto_Origen" >Alfabeto Origen :  </p>
+                <p id="Alfabeto_Cifrado">Alfabeto Cifrado:  </p>
+            </div>
+            <hr> 
+            <label for="Resultado" style='display: inline;'>Texto convertido:</label><br>
+            <div id="Resultado" style='width: 520px; border: 1px solid #2255aa; padding: 5;'>
+                <p id="Texto_Cifrado">&nbsp;</p> 
+            </div>       
+    
+        </form>
+    </main>
+
+    <footer>
+      <p>&copy Copy Right 2023 | Unicoc</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
