@@ -92,7 +92,16 @@ a:hover {
   padding: 15px;
   gap: 10px;
   color: white;
+ 
+
 }
+
+section:last-child{
+  grid-column: span 2;
+
+}
+
+
 main {
   background-color: var(--clr-morado-gris);
   margin-block: 0;
@@ -100,7 +109,13 @@ main {
 }
 
 #span {
-  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  > img{
+    justify-self: center;
+    width: 250px;
+    border-radius: 3px;
+  }
 }
 
 #caja > * {
